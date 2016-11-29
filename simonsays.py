@@ -64,7 +64,7 @@ def new_game():
         scores_turtle.reset()
         scores_turtle.hideturtle()
 
-        turtle.write("Simon Says“ + "\nby Jordan Purinton", align="center", font=("Arial", 36, "bold"))
+        # turtle.write("Simon Says“ + "\nby Jordan Purinton", align="center", font=("Arial", 36, "bold"))
 
         # Prompts user to enter his/her name
         name = turtle.textinput("Simon Says game", "Enter your name and then press OK:")

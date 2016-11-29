@@ -1,9 +1,10 @@
 Mary 11
 Steve 10
-PythonWizard 8
 Kevin 8
+PythonWizard 8
+Russel Wilson 7
 Rick 7
 J 7
-Russel Wilson 7
 Shiloh 7
 ScrumMaster 6
+Jordan 1
