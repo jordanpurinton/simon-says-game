@@ -1,6 +1,8 @@
 import turtle
 import random
 import time
+import tkSimpleDialog
+# -*- coding: utf-8 -*-
 
 """
 Simon Says Game
@@ -64,10 +66,8 @@ def new_game():
         scores_turtle.reset()
         scores_turtle.hideturtle()
 
-        # turtle.write("Simon Says“ + "\nby Jordan Purinton", align="center", font=("Arial", 36, "bold"))
-
         # Prompts user to enter his/her name
-        name = turtle.textinput("Simon Says game", "Enter your name and then press OK:")
+        name = tkSimpleDialog.askstring("Simon Says game", "Enter your name and then press OK:")
 
         turtle.clear()
 
@@ -82,7 +82,7 @@ def new_game():
             align="center", font=("Arial", 14, "bold"))
 
         # Asks user if user wants to play on easy or hard mode
-        instructions_input = turtle.textinput("Ready to play?", "Please read the instructions\nPress OK to play on easy mode"
+        instructions_input = tkSimpleDialog.askstring("Ready to play?", "Please read the instructions\nPress OK to play on easy mode"
                                                                 "\n(enter \"hard\" and hit OK for hard mode):")
         instructions_input.strip().lower()
 
@@ -130,14 +130,14 @@ def new_game():
 
             # Prompt user to guess the pattern
             if score == 0:
-                user_guess = turtle.textinput("What was the pattern?",
+                user_guess = tkSimpleDialog.askstring("What was the pattern?",
                                               "Enter your guess:\n(Remember, if pattern is blue red,\nthen the pattern would be br)")
                 try:
                     user_guess = user_guess.strip().lower()
                 except(AttributeError):
                     correct = False
             else:
-                user_guess = turtle.textinput("What was the pattern?", "Enter your guess:")
+                user_guess = tkSimpleDialog.askstring("What was the pattern?", "Enter your guess:")
                 user_guess = user_guess.strip().lower()
 
             # If user's guess is not equal to the answer_string, game stops, displays user score
@@ -168,7 +168,7 @@ def new_game():
 
         # Asks user if he/she wants to play again
         if not correct:
-            continue_option = turtle.textinput("GAME OVER!", "Enter q and hit OK to quit. Otherwise, press OK to play again:")
+            continue_option = tkSimpleDialog.askstring("GAME OVER!", "Enter q and hit OK to quit. Otherwise, press OK to play again:")
         # User quits the game, ends loop
         if continue_option.strip() == "q" or continue_option.strip() == "Q":
             break
